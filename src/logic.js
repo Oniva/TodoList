@@ -34,7 +34,7 @@ export function submitButton(){
 
     previousColor = pickedColor;
 
-    para.style.color = randomChoice(colors);
+    para.style.color = pickedColor;
 
     
     para.style.textAlign = "center";
