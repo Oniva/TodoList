@@ -4,10 +4,6 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import { submitButton, editValue } from './logic';
 
-//import {MDCTextField} from '@material/textfield';
-
-//const TextField = new MDCTextField();
-
 class App extends Component {
   render() {
     return (
@@ -21,7 +17,7 @@ class App extends Component {
         <h1 className="heading">Todo List:</h1>
           <Button className="edit" id="editbtn" onClick={editValue}>Edit</Button>
           <input id="inputbox" type="text" placeholder="New Task"></input>
-          <Button onClick={submitButton}>Submit</Button>
+          <Button id="submit" onClick={submitButton}>Submit</Button>
           <script src="./logic.js"></script>
         </div>
       </div>

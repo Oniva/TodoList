@@ -25,16 +25,17 @@ export function submitButton(){
     let text = document.createTextNode(document.getElementById("inputbox").value);
     para.appendChild(text);
 
+    var previousColor
+    let pickedColor = randomChoice(colors);
 
+    while(previousColor === pickedColor) {
+        pickedColor = randomChoice(colors);  
+    }
 
-//    let previousColor
-//    let pickedColor = randomChoice(colors);
+    previousColor = pickedColor;
 
-//    while(previousColor === pickedColor) {
-//       pickedColor = randomChoice(colors);  
-//    }
     para.style.color = randomChoice(colors);
-//    previousColor = pickedColor;
+
     
     para.style.textAlign = "center";
     document.body.appendChild(para);
@@ -49,3 +50,5 @@ export function submitButton(){
         }
     };
 };
+
+
