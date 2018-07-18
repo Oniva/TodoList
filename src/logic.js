@@ -57,7 +57,7 @@ export function submitButton(){
     //     para.style.color = nextColor;
     // }
     
-    
+    para.style.color = getColor();
     
     para.style.textAlign = "center";
     document.body.appendChild(para);
