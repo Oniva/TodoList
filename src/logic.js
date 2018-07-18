@@ -16,26 +16,48 @@ export function editValue(){
 
 let colors = ['#4DD0E1', '#9C27B0', '#E91E63', '#2196F3', '#FF5722', '#00838F', '#FF80AB'];
 
-function randomChoice(arr) {
-    return arr[Math.floor(arr.length * Math.random())];
+// function randomChoice(arr) {
+//     return arr[Math.floor(arr.length * Math.random())];
+// }
+let i = -1
+function getColor() {
+    i++
+    if(i > colors.length){
+        i = 0
+        return colors[i]
+        
+    }
+    else
+    {
+        return colors[i]
+    }
+    
 }
-
 export function submitButton(){
     let para = document.createElement("p");
     let text = document.createTextNode(document.getElementById("inputbox").value);
     para.appendChild(text);
 
-    var previousColor
-    let pickedColor = randomChoice(colors);
+  
 
-    while(previousColor === pickedColor) {
-        pickedColor = randomChoice(colors);  
-    }
+    // var previousColor
+    // let nextColor
+    // if(!(previousColor)){
+    //     para.style.color = randomChoice(colors);
+    //     previousColor = para.style.color;
+    //     console.log("here");
+    // }
+    // else
+    // {
+    //     nextColor = randomChoice(colors);
+    //     while(previousColor === nextColor){
+    //         nextColor = randomChoice(colors);
 
-    previousColor = pickedColor;
-
-    para.style.color = pickedColor;
-
+    //     }
+    //     para.style.color = nextColor;
+    // }
+    
+    
     
     para.style.textAlign = "center";
     document.body.appendChild(para);
