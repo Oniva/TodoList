@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from '@material-ui/core/Button';
-import { submitButton, editValue } from './logic';
 
+import Inputs from './Inputs.js';
 class App extends Component {
   render() {
     return (
@@ -15,10 +14,7 @@ class App extends Component {
         </header>
         <div align="center">
         <h1 className="heading">Todo List:</h1>
-          <Button className="edit" id="editbtn" onClick={editValue}>Edit</Button>
-          <input id="inputbox" type="text" placeholder="New Task"></input>
-          <Button id="submit" onClick={submitButton}>Submit</Button>
-          <script src="./logic.js"></script>
+        <Inputs />
         </div>
       </div>
     );
